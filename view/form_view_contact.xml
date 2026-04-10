@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="form_contactos_campos" model="ir.ui.view">
+        <field name="name">res.partner.view.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='property_delivery_carrier_id']" position="after">
+                <field name="tamanio_empresa" />
+                <field name="segmentacion" />
+                <field name="linea_negocio"></field>
+                <field name="cliente_recurrente"></field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
