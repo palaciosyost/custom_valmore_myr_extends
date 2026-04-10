@@ -6,11 +6,15 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='property_delivery_carrier_id']" position="after">
+            <xpath expr="//div[@class='o_address_format']" position="after">
                 <field name="tamanio_empresa" />
                 <field name="segmentacion" />
                 <field name="linea_negocio"></field>
                 <field name="cliente_recurrente"></field>
+                <field name="tipo_comprobante"></field>
+            </xpath>
+            <xpath expr="//field[@name='function']" position="replace">
+                <field name="cargo"></field>
             </xpath>
         </field>
     </record>

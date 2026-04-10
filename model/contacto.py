@@ -4,6 +4,30 @@ from odoo import models, fields, api
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
+    cargo = fields.Selection([
+        ('gerencia_direccion', 'Gerencia / Dirección'),
+        ('finanzas', 'Finanzas'),
+        ('operaciones', 'Operaciones'),
+        ('administracion', 'Administración'),
+        ('comercial', 'Comercial'),
+        ('tecnico', 'Técnico'),
+        ('logistica', 'Logística'),
+        ('compras', 'Compras'),
+        ('legal', 'Legal'),
+        ('otro', 'Otro')
+    ], string='Cargo')
+    tipo_comprobante = fields.Selection([
+        ('01', '01 Factura'),
+        ('02', '02 Recibo de Honorarios'),
+        ('03', '03 Boleta de Venta'),
+        ('05', '05 Boleto de Avión'),
+        ('07', '07 Nota de Crédito'),
+        ('08', '08 Nota de Débito'),
+        ('10', '10 Recibo Arrendamiento'),
+        ('12', '12 Ticket Maquina Registradora'),
+        ('14', '14 Recibo Servicios Públicos'),
+        ('00', '00 Otros')
+    ], string='Tipo de Comprobante')
     tamanio_empresa = fields.Selection([
         ('gran_empresa', 'Gran Empresa'),
         ('mediana_empresa', 'Mediana Empresa'),
