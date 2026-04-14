@@ -12,6 +12,7 @@
                 <field name="linea_negocio"></field>
                 <field name="cliente_recurrente"></field>
                 <field name="tipo_comprobante"></field>
+                <field name="rol_decision"></field>
             </xpath>
             <xpath expr="//field[@name='function']" position="replace">
                 <field name="cargo"></field>

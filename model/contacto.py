@@ -53,3 +53,10 @@ class ResPartner(models.Model):
         ('ESP', 'Servicios especiales / Atípicos'),
     ], string='Línea de Negocio')    
     cliente_recurrente = fields.Boolean(string='Cliente recurrente')
+    rol_decision = fields.Selection([
+        ("Decisor" , "Decisor"),
+        ("Influenciador" , "Influenciador"),
+        ("Técnico" , "Técnico"),
+        ("Administrador" , "Administrador"),
+        ("Usuario" , "Usuario"),
+        ("Contacto operativo" , "Contacto operativo")], string="Rol de decisiones")
